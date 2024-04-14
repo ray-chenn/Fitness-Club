@@ -1,0 +1,54 @@
+CREATE TABLE Profile(
+     mEmail         VARCHAR(50) PRIMARY KEY,
+     fName          VARCHAR(15) NOT NULL,
+     lName          VARCHAR(15) NOT NULL,
+     pNumber        VARCHAR(12),
+     joinDate       TEXT NOT NULL
+    );
+
+CREATE TABLE Member(
+     payments       TEXT,
+     schedule       TEXT,
+     mEmail VARCHAR(50) REFERENCES Profile(mEmail)
+    );
+
+CREATE TABLE Dashboard(
+     awards         TEXT,
+     routine        TEXT,
+     rhr            INT,
+     bPressure      INT,
+     cholesterol    INT,
+     mEmail VARCHAR(50) REFERENCES Profile(mEmail)
+    );
+
+CREATE TABLE Trainer(
+     tEmail         VARCHAR(50) PRIMARY KEY,
+     fName          VARCHAR(15) NOT NULL,
+     lName          VARCHAR(15) NOT NULL
+    );
+
+CREATE TABLE Schedule(
+     dates          TEXT,
+     times          TEXT,
+     rooms          TEXT,
+     members        TEXT,
+     tEmail VARCHAR(50) REFERENCES Trainer(tEmail)
+    );
+
+CREATE TABLE Admin(
+     aEmail         VARCHAR(50) PRIMARY KEY,
+     fName          VARCHAR(15) NOT NULL,
+     lName          VARCHAR(15) NOT NULL
+    );
+
+CREATE TABLE Equipment(
+     type           VARCHAR(25),
+     status         TEXT
+    );
+
+CREATE TABLE Payments(
+     billing        TEXT,
+     fees           TEXT,
+     sessions       TEXT,
+     aEmail VARCHAR(50) REFERENCES Admin(aEmail)
+    );
