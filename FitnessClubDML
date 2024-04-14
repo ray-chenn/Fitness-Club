@@ -1,0 +1,62 @@
+INSERT INTO Profile VALUES ('joshbrett@fitness.ca', 'Josh', 'Brett', null, 'December 4, 2023');
+INSERT INTO Profile VALUES ('brockhutchinson@fitness.ca', 'Brock', 'Hutchinson', null, 'March 16, 2024');
+INSERT INTO Profile VALUES ('toryvidmar@fitness.ca', 'Tory', 'Vidmar', null, 'April 7, 2024');
+INSERT INTO Profile VALUES ('brodiefalgoust@fitness.ca', 'Brodie', 'Falgoust', null, 'November 8, 2023');
+INSERT INTO Profile VALUES ('caseykelly@fitness.ca', 'Casey', 'Kelly', null, 'January 8, 2024');
+INSERT INTO Profile VALUES ('dylanmcknight@fitness.ca', 'Dylan', 'Mcknight', null, 'March 25, 2023');
+INSERT INTO Profile VALUES ('nicolasberndt@fitness.ca', 'Nicolas', 'Berndt', null, 'February 6, 2023');
+INSERT INTO Profile VALUES ('joefazer@fitness.ca', 'Joe', 'Fazer', null, 'March 28, 2024');
+
+INSERT INTO Member VALUES (null, null, 'joshbrett@fitness.ca');
+INSERT INTO Member VALUES (null, null, 'brockhutchinson@fitness.ca');
+INSERT INTO Member VALUES (null, null, 'toryvidmar@fitness.ca');
+INSERT INTO Member VALUES (null, null, 'brodiefalgoust@fitness.ca');
+INSERT INTO Member VALUES (null, null, 'caseykelly@fitness.ca');
+INSERT INTO Member VALUES (null, null, 'dylanmcknight@fitness.ca');
+INSERT INTO Member VALUES (null, null, 'nicolasberndt@fitness.ca');
+INSERT INTO Member VALUES (null, null, 'joefazer@fitness.ca');
+
+INSERT INTO Dashboard VALUES (null, null, 56, 89, 86, 'joshbrett@fitness.ca');
+INSERT INTO Dashboard VALUES (null, null, 54, 96, 96, 'brockhutchinson@fitness.ca');
+INSERT INTO Dashboard VALUES (null, null, 62, 110, 82, 'toryvidmar@fitness.ca');
+INSERT INTO Dashboard VALUES (null, null, 36, 107, 128, 'brodiefalgoust@fitness.ca');
+INSERT INTO Dashboard VALUES (null, null, 90, 98, 185, 'caseykelly@fitness.ca');
+INSERT INTO Dashboard VALUES (null, null, 52, 105, 50, 'dylanmcknight@fitness.ca');
+INSERT INTO Dashboard VALUES (null, null, 31, 88, 56, 'nicolasberndt@fitness.ca');
+INSERT INTO Dashboard VALUES (null, null, 42, 116, 69, 'joefazer@fitness.ca');
+
+INSERT INTO Trainer VALUES ('gregogallagher@fitness.ca', 'Greg', 'O Gallaher');
+INSERT INTO Trainer VALUES ('jayvincent@fitness.ca', 'Jay', 'Vincent');
+INSERT INTO Trainer VALUES ('arnoldschwarzeneggar@fitness.ca', 'Arnold', 'Schwarzeneggar');
+INSERT INTO Trainer VALUES ('jeffcavalier@fitness.ca', 'Jeff', 'Cavalier');
+INSERT INTO Trainer VALUES ('austindunham@fitness.ca', 'Austin', 'Dunham');
+
+INSERT INTO Schedule VALUES (null, null, null, null,'gregogallagher@fitness.ca');
+INSERT INTO Schedule VALUES (null, null, null, null,'jayvincent@fitness.ca');
+INSERT INTO Schedule VALUES (null, null, null, null, 'arnoldschwarzeneggar@fitness.ca');
+INSERT INTO Schedule VALUES (null, null, null, null, 'jeffcavalier@fitness.ca');
+INSERT INTO Schedule VALUES (null, null, null, null, 'austindunham@fitness.ca');
+
+INSERT INTO Admin VALUES ('seannalewanyj@fitness.ca', 'Sean', 'Nalewanyj');
+INSERT INTO Admin VALUES ('noeldeyzel@fitness.ca', 'Noel', 'Deyzel');
+INSERT INTO Admin VALUES ('joeyswoll@fitness.ca', 'Joey', 'Swoll');
+
+INSERT INTO Equipment VALUES ('Free Weights', null);
+INSERT INTO Equipment VALUES ('Bars', null);
+INSERT INTO Equipment VALUES ('Seats', null);
+INSERT INTO Equipment VALUES ('Benches', null);
+INSERT INTO Equipment VALUES ('Plates', null);
+INSERT INTO Equipment VALUES ('Machines', null);
+INSERT INTO Equipment VALUES ('Bikes', null);
+INSERT INTO Equipment VALUES ('Treadmills', null);
+
+INSERT INTO Payments VALUES (null, null, null, 'seannalewanyj@fitness.ca');
+INSERT INTO Payments VALUES (null, null, null, 'noeldeyzel@fitness.ca');
+INSERT INTO Payments VALUES (null, null, null, 'joeyswoll@fitness.ca');
+
+UPDATE Member
+SET Schedule = '5pm'
+WHERE mEmail = 'brodiefalgoust@fitness.ca';
+
+DELETE FROM Equipment
+WHERE type = 'Bikes';
